@@ -1,0 +1,25 @@
+First: null
+Removed first: null
+Last: null
+Entire list: 
+
+After inserting 3 books: 
+1 . Book{numberOfPages=239, bookType=HARDBACK, Title='Undaunted Courage', price=32.5}
+2 . Book{numberOfPages=129, bookType=SOFTBACK, Title='For Whom the Bell Tolls', price=15.0}
+3 . Book{numberOfPages=88, bookType=HARDBACK, Title='To Kill a Mockingbird', price=25.75}
+
+After adding fourth book: 
+1 . Book{numberOfPages=239, bookType=HARDBACK, Title='Undaunted Courage', price=32.5}
+2 . Book{numberOfPages=129, bookType=SOFTBACK, Title='For Whom the Bell Tolls', price=15.0}
+3 . Book{numberOfPages=88, bookType=HARDBACK, Title='To Kill a Mockingbird', price=25.75}
+4 . Book{numberOfPages=12, bookType=HARDBACK, Title='Goodnight Moon', price=12.5}
+
+First: Node{info='Book{numberOfPages=239, bookType=HARDBACK, Title='Undaunted Courage', price=32.5}'
+Last: null
+Removed first: Node{info='Book{numberOfPages=239, bookType=HARDBACK, Title='Undaunted Courage', price=32.5}'
+Entire list: 
+1 . Book{numberOfPages=239, bookType=HARDBACK, Title='Undaunted Courage', price=32.5}
+2 . Book{numberOfPages=129, bookType=SOFTBACK, Title='For Whom the Bell Tolls', price=15.0}
+3 . Book{numberOfPages=88, bookType=HARDBACK, Title='To Kill a Mockingbird', price=25.75}
+4 . Book{numberOfPages=12, bookType=HARDBACK, Title='Goodnight Moon', price=12.5}
+

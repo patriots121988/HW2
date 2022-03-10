@@ -1,8 +1,27 @@
-package edu.monmouth.assignment2;
+package edu.monmouth.hw2;
+
+import edu.monmouth.book.Book;
+import edu.monmouth.book.BookException;
+import edu.monmouth.book.BookTypes;
+import java.io.FileNotFoundException;
+import java.io.PrintStream;
 
 public class HW2 {
 
     public static void main(String[] args) {
+
+        final String LOGFILENAME = "HW2.txt";
+        try {
+            PrintStream st = new PrintStream(LOGFILENAME);
+            System.setOut(st);
+            System.setErr(st);
+        } catch(FileNotFoundException ioe) {
+            System.err.println("Cannot redirect stderr and stdout " +
+                    ioe.getMessage());
+            ioe.printStackTrace();
+            System.exit(-1);
+        }
+
         ListNode list = new ListNode();
 
         System.out.println("First: " + list.first());
@@ -16,16 +35,14 @@ public class HW2 {
         Book book3 = null;
         Book book4 = null;
 
-        try{
+        try {
             book1 = new Book(88, 25.75, "To Kill a Mockingbird", BookTypes.HARDBACK);
             book2 = new Book(129, 15, "For Whom the Bell Tolls", BookTypes.SOFTBACK);
             book3 = new Book(239, 32.50, "Undaunted Courage", BookTypes.HARDBACK);
             book4 = new Book(12, 12.50, "Goodnight Moon", BookTypes.HARDBACK);
-        } catch(BookException e) {
-            System.err.println("Cannot create all books");
-            System.exit(HW2Constants.BOOKFAILURE);
+        } catch (BookException e){
+            System.err.println("Cannot make book" + e);
         }
-
 
         list.insert(book1);
         list.insert(book2);

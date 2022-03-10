@@ -1,35 +1,31 @@
-package edu.monmouth.assignment2;
+package edu.monmouth.hw2;
+import edu.monmouth.book.*;
 
 public class Node
 {
-    /* change this attribute to store a reference to a Book */
-    private String info;
     private Node next;
-    Book book;
+    private Book info;
 
     @Override
     public String toString() {
         return "Node{" +
-                "info='" + info + '\'' +
-                ", next=" + next +
-                ", book=" + book +
-                '}';
+                "info='" + info + '\'';
     }
 
     /* change this constructor so it accepts a reference to a Book */
     public Node(Book book) {
-        this.book = book;
+        this.info = book;
         next = null;
     }
 
     /* change this method so it accepts a reference to  Book */
     public void setInfo(Book book) {
-        this.book = book;
+        this.info = book;
     }
 
     /* change this method so it returns a reference to a Book */
-    public String getInfo() {
-        return book.name();
+    public Book getInfo() {
+        return this.info;
     }
 
     public void setNext(Node link) {
